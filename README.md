@@ -2,6 +2,16 @@ FPGA_DMA
 ===========
 This project is based on [this github project](https://github.com/robertofem/CycloneVSoC-examples/tree/master/FPGA-hardware/DE1-SoC/FPGA_DMA). It is modified to send mock data over data to SoC and can be read using .c files in soc directory.
 
+Usage:
+------------
+
+* Connect laptop to board via ethernet and ssh onto it
+* Add C programs to board by transferring to sd card, git, or ssh
+* Compile programs with gcc
+* Trigger DMA using trigger_dma.c
+* Read data to file using using read_data_to_file.c
+* Experiment with reading from memory using read_mem.c
+
 Description
 ------------
 This project implements a double port On-Chip RAM (FPGA-OCR) and a DMA Controller Core (available in Qsys) controller in the FPGA. Its purpose is to test the DMA Controller in the FPGA and test writing/reading to HPS using the FPGA as master. The project comes with DMA Controller write port connected to FPGA-OCR and read port connected to HPS. Therefore data can be copied from HPS to the FPGA-OCR. If you want to move data in the oposite direction switch the connectiion of write and read port in DMA Controller (in Qsys). This project is a modification of the DE1-SoC Golden Hardware Reference Design (GHRD) available in the DE1-SoC CD-ROM documentation.
