@@ -1,5 +1,6 @@
 FPGA_DMA
 ===========
+This project is based on [this github project](https://github.com/robertofem/CycloneVSoC-examples/tree/master/FPGA-hardware/DE1-SoC/FPGA_DMA). It is modified to send mock data over data to SoC and can be read using .c files in soc directory.
 
 Description
 ------------
